@@ -3,10 +3,17 @@ import React, { useState, useReducer, useEffect } from "react";
 
 export const AppContext = React.createContext();
 
+const initialState = {
+  user: JSON.parse(localStorage.getItem("user")) || null,
+  // user: null,
+ 
+};
+
 
 
 export const AppProvider = ({ children }) => {
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(initialState);
+
 
 
      //localStorahe user
@@ -14,10 +21,15 @@ export const AppProvider = ({ children }) => {
   //   localStorage.setItem("user", JSON.stringify(user));
   // }, [user]);
 
+  const logout = () => {
+    localStorage.removeItem('user');
+    setUser(null)
+  };
+
 
     return (
         <AppContext.Provider
-        value={{ 
+        value={{ user,logout
 
         }}>
         {children}

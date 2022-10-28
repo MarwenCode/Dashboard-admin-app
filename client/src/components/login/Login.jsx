@@ -19,7 +19,7 @@ const Login = () => {
                 email,
                 password
             })
-            // localStorage.setItem("user", JSON.stringify(res))
+            localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
         
             // res.data && window.location.replace("/");

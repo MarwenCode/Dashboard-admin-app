@@ -10,7 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
 
-    const [user, setUser] = useState([])
+ 
 
     const handleRegister = async(e) => {
         e.preventDefault()
@@ -22,9 +22,9 @@ const Register = () => {
                 confirmPassword
             });
          
-
+            localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
-            setUser(res.data)
+           
 
            
             
