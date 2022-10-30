@@ -22,7 +22,7 @@ const Login = () => {
             localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
         
-            res.data && window.location.replace("/");
+            res.data && window.location.replace("/dashboard");
             
         } catch (error) {
             console.log(error)

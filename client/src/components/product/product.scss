@@ -1,0 +1,16 @@
+.product{
+  color:black;
+  display: flex;
+  align-items: center;
+
+  .items{
+    margin-left: 50px;
+    
+  }
+
+  .delete{
+    margin-right: 50px;
+    cursor: pointer;
+  }
+  
+}

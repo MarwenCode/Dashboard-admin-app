@@ -31,7 +31,7 @@ function Dashboard() {
      
       <div className="section-dashboard ">
         <div className="top">
-        <h3 className="username"> {getUser.username}</h3>
+        <h3 className="username"> Hello {getUser.username}</h3>
         <h2 className="title">Sales statistics</h2>
        
         
@@ -41,7 +41,7 @@ function Dashboard() {
           </h2>
           <h2 className="orders">
         
-            <FaShoppingCart /> 50
+            <FaShoppingCart /> 50/Day
           </h2>
         </div>
         <div className="center">

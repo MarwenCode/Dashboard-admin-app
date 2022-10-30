@@ -13,10 +13,13 @@
      .top {
         display: flex;
         gap: 55px;
+        align-items: center;
+        // justify-content: center;
 
         .username{
-            color: rgb(26, 22, 22);
-            margin-left: 100px;
+            color: rgb(84, 78, 78);
+            margin-left: 50px;
+            text-transform: capitalize;
         }
         .title {
             color: black;
@@ -29,7 +32,9 @@
             color: black;
             margin-left: 150px;
             margin-top: 30px;
-            font-size: 50px;
+            margin-bottom: 30px;
+            font-size: 30px;
+
           
 
         }

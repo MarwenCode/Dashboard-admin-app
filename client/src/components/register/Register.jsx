@@ -24,6 +24,7 @@ const Register = () => {
          
             localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
+            res.data && window.location.replace("/login");
            
 
            
