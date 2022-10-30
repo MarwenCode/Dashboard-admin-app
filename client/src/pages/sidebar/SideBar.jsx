@@ -47,6 +47,9 @@ const SideBar = () => {
         <Link to="/products" className="link">
           <li className="item">Products</li>
         </Link>
+        <Link to="/item" className="link">
+          <li className="item">Add item</li>
+        </Link>
 
         <li className="item">Orders</li>
         <li className="item">Support Tickets</li>

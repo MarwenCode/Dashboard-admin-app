@@ -1,0 +1,48 @@
+.item{
+
+
+    .item-section{
+        background-color: white;
+        width: 88%;
+        height: 95vh;
+        border-radius: 50px;
+        margin-left: 150px;
+        margin-top: -530px;
+        position: relative;
+
+     
+        form{
+            margin-left: 450px;
+            margin-top: 50px;
+            position: absolute;
+            justify-content: center;
+    
+            .form-group{
+                margin-top: 20px;
+    
+                .form-control{
+                    padding: 10px;
+                    border-radius: 10px;
+                  }
+    
+    
+                  .btn{
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin-left: 50px;
+                    cursor: pointer;
+                  }
+    
+    
+    
+            }
+    
+           
+    
+    
+    
+    
+         }
+
+    }
+}

@@ -7,6 +7,7 @@ import Products from "./pages/products/Products";
 import "./app.scss"
 import { AppContext } from "./context/context";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Item from "./components/item/Item";
 
 function App() {
   const  {user } = useContext(AppContext)
@@ -19,7 +20,8 @@ function App() {
           <Route path="/register" element={user ? <Login /> : <Register /> } />
           <Route path="/products" element={<Products /> }/>
           <Route path="/dashboard" element={<Dashboard /> }/>
-            <Route path="/login" element={user ? <Dashboard /> : <Login />} />
+          <Route path="/item" element={<Item /> }/>
+          <Route path="/login" element={user ? <Dashboard /> : <Login />} />
         </Routes>
       </div>
     </Router>
