@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
-import "./dashboard.scss";
+import "./sidebar.scss";
 
-const Dashboard = () => {
+const SideBar = () => {
   const { user, logout } = useContext(AppContext);
   
 
@@ -26,8 +26,8 @@ const Dashboard = () => {
 
 // }
   return (
-    <div className="dashboard">
-      <ul className="sidebar">
+    <div className="sideBar">
+      <ul className="section">
         {user ? (
           <Link to="/login" className="link">
             <li className="logout" onClick={logout}>
@@ -36,11 +36,11 @@ const Dashboard = () => {
           </Link>
         ) : (
           <Link to="/register" className="link">
-            <li className="logout">Connexion</li>
+            <li className="logout">Login</li>
           </Link>
         )}
 
-        <Link to="/" className="link">
+        <Link to="/dashboard" className="link">
           <li className="item">Dashboard</li>
         </Link>
 
@@ -50,9 +50,10 @@ const Dashboard = () => {
 
         <li className="item">Orders</li>
         <li className="item">Support Tickets</li>
+      
       </ul>
     </div>
   );
 };
 
-export default Dashboard;
+export default SideBar;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dashboard from '../../pages/Dashboard/Dashboard';
+import Dashboard from '../../pages/sidebar/SideBar';
 // import "./login.scss";
 import axios from "axios";
 import { Link } from "react-router-dom"
@@ -22,7 +22,7 @@ const Login = () => {
             localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
         
-            // res.data && window.location.replace("/");
+            res.data && window.location.replace("/");
             
         } catch (error) {
             console.log(error)

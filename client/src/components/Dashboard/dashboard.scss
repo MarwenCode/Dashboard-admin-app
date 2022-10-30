@@ -1,0 +1,108 @@
+.dashboard {
+    overflow: hidden;
+
+
+    .section-dashboard {
+     background-color: white;
+     margin-top: -430px;
+     width: 88%;
+     height: 105vh;
+     border-radius: 50px;
+     margin-left: 150px;
+
+     .top {
+        display: flex;
+        gap: 55px;
+
+        .username{
+            color: rgb(26, 22, 22);
+            margin-left: 100px;
+        }
+        .title {
+            color: black;
+            margin-left: 50px;
+        }
+      
+    
+
+        .profite, .orders {
+            color: black;
+            margin-left: 150px;
+            margin-top: 30px;
+            font-size: 50px;
+          
+
+        }
+     }
+
+
+     .down {
+
+        .bestSellers{
+            // display: flex;
+            background-color: rgb(246, 242, 242);
+            width: 80%;
+            
+            height: 200px;
+            margin: 0% 5%;
+            margin-bottom: 150px;
+            border-radius: 30px;
+        
+          
+        
+            .carousel{
+                cursor: grab;
+                overflow: hidden;
+                // background-color: rgb(151, 113, 113);
+              
+        
+                .inner-carousel{
+                    display: flex;
+                    // background: lightblue;
+        
+        
+        
+                    .item{
+                        min-height: 20rem;
+                        min-width: 30rem;
+                        // padding: 10px;
+                        display: inline-block;
+        
+                        .down {
+                            flex-direction: column;
+        
+                            .rating{
+                                margin-left: 70px;
+                                margin-top: -50px;
+                            }
+                            .name{
+                             margin-right: 0px;
+                             margin-top: -10px;
+                            }
+                      
+        
+        
+                        }
+        
+                     
+                     
+                    }
+        
+                    .item img {
+                        width: 50%;
+                        height: 60%;
+                        border-radius: 2rem;
+                        pointer-events: none;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                  
+                    }
+                 
+                }
+            }
+        }
+     }
+   
+
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useReducer, useEffect } from "react";
+import axios from "axios";
 
 
 export const AppContext = React.createContext();
@@ -15,11 +16,25 @@ export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(initialState);
 
 
+  const [getUser, setgetUser] = useState("")
+  useEffect(() => {
+     const fetchUser = async () => {
+      const res = await axios.get("/user")
+   
+      setgetUser(res.data)
+      console.log(res)
+     }
 
+     fetchUser()
+  }, [])
+
+ 
+ 
+    
      //localStorahe user
-  // useEffect(() => {
-  //   localStorage.setItem("user", JSON.stringify(user));
-  // }, [user]);
+    //  useEffect(() => {
+    //   localStorage.setItem("user", JSON.stringify(user.user));
+    // }, [user.user]);
 
   const logout = () => {
     localStorage.removeItem('user');
@@ -29,7 +44,11 @@ export const AppProvider = ({ children }) => {
 
     return (
         <AppContext.Provider
-        value={{ user,logout
+        value={{user,getUser,
+         
+          
+          
+        logout
 
         }}>
         {children}
@@ -40,3 +59,5 @@ export const AppProvider = ({ children }) => {
 
     )
 }
+
+

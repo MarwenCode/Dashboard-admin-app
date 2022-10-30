@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dashboard from '../../pages/Dashboard/Dashboard';
+import Dashboard from '../../pages/sidebar/SideBar';
 import "./register.scss";
 import axios from "axios";
 import { Link } from "react-router-dom"

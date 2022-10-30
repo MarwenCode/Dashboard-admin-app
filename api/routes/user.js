@@ -49,6 +49,18 @@ userRoute.delete('/logout', (req, res) => {
 
 });
 
+userRoute.get("/", async(req, res) => {
+  try {
+    const user = await User.findOne()
+    res.status(200).json(user)
+    
+  } catch (error) {
+    
+    res.status(500).json(error)
+  }
+ 
+})
+
 
 
 export default userRoute;
