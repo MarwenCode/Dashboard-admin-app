@@ -6,15 +6,8 @@
     margin-left: 150px;
     margin-top: -530px;
     position: absolute;
+    overflow-y: auto;
     
-
-     overflow-y: auto;
-    
-
-
-    
-
-
     .products-heading, .items{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -34,14 +27,12 @@
 
     
 
-    
-    
-
     }
 
     .products-heading{
      margin-right: 90px;
      font-weight: 700;
+     background-color: #b1adad;
     }
 
 

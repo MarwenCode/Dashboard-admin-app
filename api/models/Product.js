@@ -11,10 +11,10 @@ const ProductSchema = new mongoose.Schema(
          type: String,
           required: true
     },
-    img: {
-     type: Buffer,
-      required: true
-     },
+    // img: {
+    //  type: Buffer,
+    //   required: true
+    //  },
     brand: {
          type: String,
      },
