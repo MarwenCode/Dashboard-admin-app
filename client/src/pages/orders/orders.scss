@@ -1,0 +1,64 @@
+
+    .orders {
+        margin-right: 120px;
+        color: black;
+       
+   
+       
+     .orders-section {
+        margin-top: -510px;
+        width: 100%;
+        background-color: white;
+        margin-left: 150px;
+        height: 95vh;
+        width: 90%;
+        position: absolute;
+        border-radius: 20px;
+       
+        
+
+        .order {
+          
+        
+      .order,
+      .order-headings {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 100px;
+        margin-bottom: 20px;
+      
+        background: #f1eaea;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+      
+    
+  
+  
+        // width: 160%;
+        padding: 0 20px;
+        margin-right: 50px;
+      
+     
+      }
+      .order-headings {
+        font-weight: 700;
+        margin-top: 60px;
+        background-color: #b1adad;
+     
+      
+ 
+       
+      }
+    }
+  
+     
+      
+
+      }
+    }
+    
+  

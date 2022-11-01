@@ -50,9 +50,15 @@ const SideBar = () => {
         <Link to="/item" className="link">
           <li className="item">Add item</li>
         </Link>
-
-        <li className="item">Orders</li>
-        <li className="item">Support Tickets</li>
+         
+         <Link to="/orders" className="link">
+         <li className="item">Orders</li>
+         </Link>
+     
+         <Link to="/tickets" className="link">
+         <li className="item">Support Tickets</li>
+         </Link>
+      
       
       </ul>
     </div>
