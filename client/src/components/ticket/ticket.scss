@@ -1,15 +1,4 @@
-.tickets-section{
-    background-color: white;
-    color: black;
-
-    background-color: white;
-    margin-top: -530px;
-    width: 88%;
-    height: 95vh;
-    border-radius: 30px;
-    margin-left: 150px;
-
-  .ticket-heading{
+.ticket {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
@@ -22,6 +11,14 @@
     text-align: center;
     width: 90%;
     margin-left: 60px;
-  }
 
+    .items{
+        display: flex;
+        gap: 2rem;
+        font-size:medium;
+
+        .add{
+            font-size: larger;
+        }
+    }
 }

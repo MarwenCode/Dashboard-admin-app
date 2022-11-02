@@ -1,0 +1,62 @@
+.addticket{
+    background-color: white;
+    color: black;
+
+    background-color: white;
+    margin-top: -530px;
+    width: 88%;
+    height: 95vh;
+    border-radius: 30px;
+    margin-left: 150px;
+
+    // margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+    .heading{
+        p{
+          color: grey;
+          font-weight: 700;
+          font-size: 1rem;
+
+        }
+
+    }
+
+    .form{
+        width: 70%;
+        margin: 0 auto;
+
+        .form-group {
+            margin-bottom: 10px;
+            margin-top: 50px;
+            input,
+            textarea,
+            select {
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #706d6d;
+              border-radius: 5px;
+              margin-bottom: 10px;
+              outline-style: none;
+              
+            }
+
+            .btn-block{
+                padding: 10px;
+                border-radius: 10px;
+                margin-left:0px;
+                width: 150px;
+                cursor: pointer;
+              }
+              .btn-block:hover{
+                background-color: #4538A1;
+              }
+          }
+
+         
+    }
+
+    
+
+}

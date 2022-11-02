@@ -1,31 +1,26 @@
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 
 const TicketSchema = mongoose.Schema(
   {
     userId: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: 'User',
+      type: String,
+      // required: true,
     },
+    title: { type: String, required: true, unique: true },
     product: {
       type: String,
-      required: [true, 'Please select a product'],
-      enum: ['Apple', 'Samsung', 'iMac', 'iPad'],
     },
     description: {
       type: String,
-      required: [true, 'Please enter a description of the issue'],
+      required: true,
     },
     status: {
       type: String,
-      required: true,
-      enum: ['new', 'open', 'closed'],
-      default: 'new',
     },
   },
   {
     timestamps: true,
   }
-)
+);
 
 export default mongoose.model("Ticket", TicketSchema);
