@@ -11,6 +11,7 @@ import Item from "./components/item/Item";
 import Orders from "./pages/orders/Orders";
 import Tickets from "./pages/tickets/Tickets";
 import AddTicket from "./components/addTicket/AddTicket";
+import SingleTicket from "./components/singleTicket/SingleTicket";
 
 function App() {
   const  {user } = useContext(AppContext)
@@ -27,6 +28,7 @@ function App() {
           <Route path="/orders" element={<Orders /> }/>
           <Route path="/tickets" element={<Tickets /> }/>
           <Route path="/addTicket" element={<AddTicket /> }/>
+          <Route path="/ticket/:id" element={<SingleTicket /> }/>
           <Route path="/login" element={user ? <Dashboard /> : <Login />} />
         </Routes>
       </div>

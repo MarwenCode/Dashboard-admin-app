@@ -67,4 +67,14 @@ ticketRoute.get("/", async(req, res) => {
     }
 })
 
+//Get ticket
+ticketRoute.get("/:id", async (req, res) => {
+  try {
+    const ticket = await Ticket.findById(req.params.id);
+    res.status(200).json(ticket);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 export default ticketRoute;

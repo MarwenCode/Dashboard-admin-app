@@ -27,7 +27,7 @@ const AddTicket = () => {
         try {
             const res =  axios.post("/ticket", newTicket);
             console.log(res.data)
-            // window.location.replace("/tickets");
+            window.location.replace("/tickets");
             
         } catch (error) {
             console.log(error)
