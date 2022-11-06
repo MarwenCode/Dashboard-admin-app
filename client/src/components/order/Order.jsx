@@ -12,11 +12,27 @@ const getlocalStorageConfirm = () => {
 };
 
 const Order = ({ item }) => {
-  const [confirm, setConfirm] = useState(getlocalStorageConfirm);
+  const [confirm, setConfirm] = useState(getlocalStorageConfirm());
+  // const [confirm, setConfirm] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("confirm", JSON.stringify(confirm));
-  }, []);
+  }, [item.id]);
+
+ console.log(confirm)
+
+//  const updateOrder = () => {
+
+//    const orderupdated = {
+//     item: item.id,
+  
+//    }
+//    return setConfirm(orderupdated )
+//  }
+
+
+
+
 
 
   return (
@@ -28,10 +44,16 @@ const Order = ({ item }) => {
       <button
         className="title"
         style={{
-          backgroundColor: confirm ? "#1eba49" : "#e9e76c",
+          backgroundColor: confirm ?   "#e9e76c" :     "#1eba49"  ,
         }}
         onClick={() => setConfirm((prev) => !prev)}>
-        {confirm ? "Confirm" : "Awaiting"}
+        {/* onClick={() => updateOrder(item.id)} */}
+
+    
+
+        {!confirm ? "Confirm"  :  "Awaiting"}
+      
+      
       </button>
     </div>
   );

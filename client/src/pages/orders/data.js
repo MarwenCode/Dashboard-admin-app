@@ -1,5 +1,7 @@
 export const data = [
-    { name: "Iphone 14",
+    {
+      id:1,
+      name: "Iphone 14",
       brand:"Apple",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
@@ -8,7 +10,7 @@ export const data = [
 
     },
     
-    { 
+    { id:2,
       name: "Iphone 13", 
      brand:"Apple",
       price:"450 $",
@@ -17,7 +19,8 @@ export const data = [
       quantity:1
 
     },
-    {  name: "GalaxyX",
+    { id:3, 
+      name: "GalaxyX",
       price:"450 $",
       image: "http://localhost:3000/images/phone3.png",
       status:"awaiting",
@@ -26,7 +29,7 @@ export const data = [
     }, 
 
     {  
-      
+      id:4,
       name: "GalaxyX",
      brand:"Sumsung",
       price:"450 $",
@@ -35,7 +38,8 @@ export const data = [
       quantity:1
 
     },
-    { name: "Iphone 13", 
+    { id:5,
+      name: "Iphone 13", 
       brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
@@ -43,7 +47,10 @@ export const data = [
       quantity:1
 
     },
-    { name: "GalaxyX",
+    { 
+      id:6,
+      
+      name: "GalaxyX",
       brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
@@ -51,7 +58,10 @@ export const data = [
       quantity:1
 
     },
-    { name: "GalaxyX",
+    { 
+      id:7,
+      
+      name: "GalaxyX",
       brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",

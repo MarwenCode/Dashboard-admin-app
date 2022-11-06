@@ -12,10 +12,12 @@ const SingleTicket = () => {
   // const [title, setTitle]= useState("")
   // const [product, setProduct]= useState("")
   const [description, setDescription] = useState("");
-  // const [status, setStatus]= useState("");
+  const [status, setStatus]= useState("");
+  const [close, setClose] = useState(true)
 
 
   const [updateMode, setUpdateMode] = useState(false);
+  // const [updateModeStatus, setUpdateModeStatus] = useState(false);
 
   const location = useLocation();
   console.log(location);
@@ -31,6 +33,8 @@ const SingleTicket = () => {
       const res = await axios.get("/ticket/" + path);
       console.log(res.data);
       setSingleTicket(res.data);
+      setDescription(res.data.description);
+      setStatus(res.data.status)
     };
 
     getSingleTicket();
@@ -41,27 +45,35 @@ const SingleTicket = () => {
   const updateTicket = async () => {
     try {
       await axios.put(`/ticket/${singleTicket._id}`, {
+       
         description,
+        status,
+       
       });
 
       setUpdateMode(false);
+   
       window.location.replace("/ticket/" + path);
     } catch (error) {
       console.log(error);
     }
   };
 
+
+ 
+
+
+
+
   return (
     <div   className="singleTicket"        >
       <SideBar />
       <div 
-    //   className="singleTicket-section" 
-       className={modalOpen ? "modalActive" : "singleTicket-section" }
+      className="singleTicket-section" 
+      //  className={modalOpen ? "modalActive" : "singleTicket-section" }
        
        >
-        <span className="edit" onClick={() => setUpdateMode((prev) => !prev)}>
-          <FaEdit />
-        </span>
+    
 
         <ul className="top">
           <div className="left">
@@ -70,11 +82,49 @@ const SingleTicket = () => {
             <li className="product">Product: {singleTicket.product}</li>
           </div>
           <div className="right">
-            <span>{singleTicket.status}</span>
+       
+            {
+            updateMode ? (
+                 <div className='form-group'>
+                 <label htmlFor='name'>Status  </label>
+                 <select type='text' className='form-control'
+                 name="status"
+                 id="status"
+                 value={status}
+                 onChange={(e) => setStatus(e.target.value)}
+                 >
+                    <option value='new'>new</option>
+                     <option value='Open'>Open</option>
+                     <option value='Closed'>Closed</option>
+                  
+       
+       
+                 </select>
+               </div>
+
+
+            ) 
+            
+            :(
+              <span>{singleTicket.status}</span>
+
+
+            )
+          
+          
+          
+          }
+      
+          
           </div>
         </ul>
         <div className="center">
+        {/* <span className="edit" onClick={() => setUpdateModeStatus((prev) => !prev)}>
+          <FaEdit />
+        </span> */}
+       
           <div className="description">
+     
             {updateMode ? (
               <>
                 <textarea
@@ -88,24 +138,39 @@ const SingleTicket = () => {
                 <button onClick={updateTicket}>update</button>
               </>
             ) : (
-              <p>{singleTicket.description}</p>
+              <p> Description: {singleTicket.description}</p>
             )}
           </div>
         </div>
         <div className="down">
-          <h1>Notes</h1>
+          {/* <h1>Notes</h1>  */}
           
-       
-          <div className="button">
+          
+          {/* <div className="button"> 
             <button className="addNote" onClick={() => setModalOpen((prev) => !prev)}>Add Note</button>
 
            
-          </div>
+          </div> */}
+             <button className="closeTicket"
+             style={{
+              backgroundColor: close ? "#1e92ed" : "#1eed40" 
+             }}
+
+             onClick={() => setClose((prev) => !prev)}
+
+             >
+              
+              {close ? "click to close" : "done"}
+             
+             </button>
         
          
         </div>
         <div className="close">
-        <button className="closeTicket">Close ticket</button>
+        <span className="edit" onClick={() => setUpdateMode((prev) => !prev)}>
+          <FaEdit />
+        </span>
+       
         </div>
        
        
