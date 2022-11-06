@@ -12,13 +12,19 @@ import Orders from "./pages/orders/Orders";
 import Tickets from "./pages/tickets/Tickets";
 import AddTicket from "./components/addTicket/AddTicket";
 import SingleTicket from "./components/singleTicket/SingleTicket";
+import AddNote from "./components/addNote/AddNote";
+
 
 function App() {
-  const  {user } = useContext(AppContext)
+  const  {user, modalOpen } = useContext(AppContext)
 
   return (
     <Router>
-      <div className="container">
+      <div    
+      // className={modalOpen ? 'moadalActive' : 'container'} 
+      className="container"  
+            >
+    
         <Routes>
           <Route path="/" element={<Dashboard /> } />
           <Route path="/register" element={user ? <Login /> : <Register /> } />
@@ -31,6 +37,8 @@ function App() {
           <Route path="/ticket/:id" element={<SingleTicket /> }/>
           <Route path="/login" element={user ? <Dashboard /> : <Login />} />
         </Routes>
+        <AddNote  />
+     
       </div>
     </Router>
   );

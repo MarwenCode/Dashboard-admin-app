@@ -15,6 +15,8 @@ const initialState = {
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(initialState);
 
+  const [modalOpen, setModalOpen] = useState(false)
+
 
   const [getUser, setgetUser] = useState("")
   useEffect(() => {
@@ -45,6 +47,7 @@ export const AppProvider = ({ children }) => {
     return (
         <AppContext.Provider
         value={{user,getUser,
+          modalOpen, setModalOpen,
          
           
           

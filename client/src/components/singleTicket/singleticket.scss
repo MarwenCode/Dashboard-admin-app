@@ -3,6 +3,7 @@
 
 
     .singleTicket-section{
+  
 
         .edit{
             margin-left: 500px;
@@ -19,32 +20,42 @@
         background-color: white;
         margin-top: -530px;
         width: 88%;
-        height: 95vh;
+        height: 105vh;
         border-radius: 30px;
-        margin-left: 150px;
+        margin-left: 140px;
         // justify-content: center;
 
+       
 
-        width: 88%;
+    
         // max-width: 960px;
         // margin: 0 auto;
         padding: 0 20px;
         text-align: center;
         position: relative;
-        min-width: 640px;
+        min-width: 630px;
         
 
         .top{
             position: absolute;
             margin-top: 50px;
-            margin-left: 260px;
+            margin-left: 250px;
+           
+          
             display: block;
-           min-width: 640px;
+            width: 650px;
             list-style: none;
-            border-bottom: 1px grey solid;
+            // border-bottom: 1px grey solid;
             font-weight: 700;
             text-align: start;
             display: flex;
+            padding: 15px;
+
+
+            -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+            box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+            background: linear-gradient(#c7cdd1, #cacde6);
+    
 
             .left{
 
@@ -64,19 +75,27 @@
         .center{
             margin-left: 140px;
             margin-right: 700px;
-            margin-top: 0px;
+            margin-top: 70px;
             min-width: 250px;
+
+          
+    
         
        
 
             .description{
                 background-color: rgb(236, 234, 234);
-                margin-left: 100px;
-                width: 660px;
-                margin-top: 150px;
+                margin-left: 110px;
+                width: 650px;
+                margin-top:188px;
                 position: absolute;
                 height: 150px;
                 text-align: start;
+                padding: 20px;
+
+                -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+                box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+                background: linear-gradient(#c7cdd1, #cacde6);
 
                 .descriptionInput{
                     width: 100%;
@@ -91,10 +110,123 @@
         }
         .down{
             margin-left: 250px;
-            margin-right: 700px;
-            margin-top: 450px;
+            // margin-right: 700px;
+            margin-top: 350px;
             position: absolute;
+
+
+            -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+            box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+            background: linear-gradient(#c7cdd1, #cacde6);
+    
+
+            h1{
+                margin-right: 450px;
+            }
+
+            .button{
+                display: flex;
+                width: 100%;
+                padding: 20px;
+             
+
+              .closeTicket{
+                margin-left: 420px;
+                // margin-right: -150px;
+                padding: 20px;
+                cursor: pointer;
+                padding: 10px;
+              
+              }
+              .addNote{
+                // margin-left:-150px;
+                // margin-right: 0px;
+                padding: 20px;
+                cursor: pointer;
+             
+
+              }
+
+    
+              .addNote:hover{
+                background-color: #4538A1;
+              }
+              .closeTicket:hover{
+                background-color: #4538A1;
+              }
+            }
 
         }
     }
+    .modalActive{
+        background-color: rgb(245, 236, 236);
+    
+  
+
+        .edit{
+          
+            display: none;
+        }
+
+        
+        // background-color: rgb(122, 110, 110);
+        // color: black;
+    
+        // background-color: rgb(122, 110, 110);
+        margin-top: -530px;
+        width: 88%;
+        height: 105vh;
+        border-radius: 30px;
+        margin-left: 140px;
+      
+
+       
+
+    
+        padding: 0 20px;
+        text-align: center;
+        position: relative;
+        min-width: 630px;
+        
+
+        .top{
+           
+            display: none;
+           
+          
+            
+      
+        
+           
+          
+            
+        }
+        .center{
+        
+            display: none;
+
+          
+    
+        
+       
+
+     
+        }
+        .down{
+          
+            display: none;
+
+
+        
+        }
+        .closeTicket{
+            display: none;
+        }
+    }
+
+    
+    
 }
+
+
+
