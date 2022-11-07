@@ -2,11 +2,23 @@ import axios from "axios";
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
+import { MdExpandMore } from "react-icons/md";
+import { AiFillPlusCircle } from "react-icons/ai";
+import { MdAddTask, MdOutlineSell, MdHomeMax } from "react-icons/md";
+import { RiHome6Line } from "react-icons/ri";
+import { CiLogout } from "react-icons/ci";
+import { GrHomeOption, GrProductHunt } from "react-icons/gr";
 import "./sidebar.scss";
 
 const SideBar = () => {
   const { user, logout } = useContext(AppContext);
+
+  const [details, setDetails] = useState(false)
+ 
   
+
+ 
+ 
 
 
 
@@ -31,7 +43,7 @@ const SideBar = () => {
         {user ? (
           <Link to="/login" className="link">
             <li className="logout" onClick={logout}>
-              Logout
+             <CiLogout />         Logout
             </li>
           </Link>
         ) : (
@@ -41,22 +53,35 @@ const SideBar = () => {
         )}
 
         <Link to="/dashboard" className="link">
-          <li className="item">Dashboard</li>
+          <li className="item"> <RiHome6Line /> Dashboard </li>
+      
         </Link>
 
         <Link to="/products" className="link">
-          <li className="item">Products</li>
+          <li className="item"> <GrProductHunt />  Products</li>
         </Link>
         <Link to="/item" className="link">
-          <li className="item">Add item</li>
+          <li className="item"> <MdAddTask/>  Add item</li>
         </Link>
          
          <Link to="/orders" className="link">
-         <li className="item">Orders</li>
+         <li className="item"> <MdOutlineSell />  Orders</li>
          </Link>
      
          <Link to="/tickets" className="link">
-         <li className="item">Support Tickets</li>
+         <li className="item" onClick={() => setDetails(!details)} > 
+         <summary  > <MdExpandMore />  Support Tickets</summary>
+         {details && 
+
+         <Link  to="/addTicket" className="link" >
+           <span> <AiFillPlusCircle /> add Ticket</span>
+         </Link>
+         
+       
+         
+         }
+        
+         </li>
          </Link>
       
       

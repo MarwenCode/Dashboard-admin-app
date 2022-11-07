@@ -17,10 +17,7 @@ const Ticket = ({ticket}) => {
     </Link>
     <div className="items">
     <span> <FaTrash />     </span>
-    {/* <span> <FaEdit />     </span> */}
-    <Link  to="/addTicket"  >
-    <span className='add'> <HiOutlineFolderAdd />   </span>
-    </Link>
+   
 
 
     </div>
