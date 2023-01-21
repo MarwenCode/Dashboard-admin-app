@@ -23,7 +23,13 @@ const connect = async () => {
     }
   };
 
-
+  app.use(cors({
+    origin: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  }))
+  
 
 
   app.use(express.json());

@@ -3,8 +3,11 @@ import { data } from "./data";
 import Order from '../../components/order/Order';
 import "./orders.scss"
 import SideBar from '../sidebar/SideBar';
+import { AppContext } from '../../context/context';
+import { useContext } from 'react';
 
 const Orders = () => {
+  const {products } = useContext(AppContext)
   return (
     <div className='orders'>
         <SideBar />
@@ -17,9 +20,10 @@ const Orders = () => {
         <div>Quantity</div>
         <div>Status</div>
        
+       
       </div>
-      {data.map((item) => (
-            <Order     key={item.id} item={item} />
+      {products.map((item) => (
+            <Order     key={item.id} item={item} status={item.status} />
           ))}
      
     </div>

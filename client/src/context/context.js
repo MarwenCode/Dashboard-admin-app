@@ -30,6 +30,20 @@ export const AppProvider = ({ children }) => {
      fetchUser()
   }, [])
 
+  // get products : 
+  const [products, setProducts] = useState([])
+
+
+  useEffect(() => {
+    const fetchProducts = async() => {
+      const res = await axios.get("/product")
+      console.log(res)
+      setProducts(res.data)
+    }
+
+    fetchProducts()
+  },[])
+
  
  
     
@@ -47,7 +61,7 @@ export const AppProvider = ({ children }) => {
     return (
         <AppContext.Provider
         value={{user,getUser,
-          modalOpen, setModalOpen,
+          modalOpen, setModalOpen,products, setProducts,
          
           
           
