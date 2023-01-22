@@ -125,8 +125,9 @@ const SingleTicket = () => {
           <button
             className="closeTicket"
             style={{
-              // backgroundColor: close ? "#1e92ed" : "#1eed40",
-              backgroundColor: close ? "#66bdde" :  "#4f9547"
+              backgroundColor: close ? "#1e92ed" : "#1eed40",
+              // backgroundColor: close ? "#66bdde" :  "#4f9547"
+              // backgroundColor: close ? "#66bdde" :  "#4f9547"
             }}
             onClick={() => setClose((prev) => !prev)}>
             {close ? "archive" : "done"}

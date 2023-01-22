@@ -70,7 +70,7 @@ const SideBar = () => {
      
          <Link to="/tickets" className="link">
          <li className="item" onClick={() => setDetails(!details)} > 
-         <summary  > <MdExpandMore />  Support Tickets</summary>
+         <summary  >  Support Tickets <MdExpandMore /> </summary> 
          {details && 
 
          <Link  to="/addTicket" className="link" >
