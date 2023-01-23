@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import userRoute from "./routes/user.js";
 import productRoute from "./routes/product.js";
 import ticketRoute from "./routes/ticket.js";
+import descriptionRoute from "./routes/description.js"
 import cors from "cors";
 
 
@@ -35,6 +36,7 @@ const connect = async () => {
   app.use(express.json());
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
+app.use("/api/description", descriptionRoute);
 app.use("/api/ticket", ticketRoute)
 
 
