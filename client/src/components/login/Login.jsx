@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Dashboard from '../../pages/sidebar/SideBar';
 // import "./login.scss";
 import axios from "axios";
 import { Link } from "react-router-dom"
 
 const Login = () => {
-
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -19,6 +18,7 @@ const Login = () => {
                 email,
                 password
             })
+           
             localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
         

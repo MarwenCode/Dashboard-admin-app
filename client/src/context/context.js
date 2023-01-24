@@ -1,4 +1,5 @@
 import React, { useState, useReducer, useEffect } from "react";
+
 import axios from "axios";
 
 
@@ -10,25 +11,29 @@ const initialState = {
  
 };
 
-
+// console.log(initialState.user.data);
 
 export const AppProvider = ({ children }) => {
-  const [user, setUser] = useState(initialState);
+  const [user, setUser] = useState();
 
   const [modalOpen, setModalOpen] = useState(false)
 
 
-  const [getUser, setgetUser] = useState("")
-  useEffect(() => {
-     const fetchUser = async () => {
-      const res = await axios.get("/user")
+  // const [getUser, setgetUser] = useState("")
+  // useEffect(() => {
+  //    const fetchUser = async () => {
+  //     const res = await axios.get("/user")
    
-      setgetUser(res.data)
-      console.log(res)
-     }
+  //     // setgetUser(res.data)
+  //     setUser(res.data)
+  //     console.log(res)
+  //    }
 
-     fetchUser()
-  }, [])
+  //    fetchUser()
+  // }, [])
+
+  // console.log(getUser)
+  // console.log(user.data)
 
   // get products : 
   const [products, setProducts] = useState([])
@@ -60,7 +65,8 @@ export const AppProvider = ({ children }) => {
 
     return (
         <AppContext.Provider
-        value={{user,getUser,
+        value={{ user:initialState.user,
+          
           modalOpen, setModalOpen,products, setProducts,
          
           

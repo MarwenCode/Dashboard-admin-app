@@ -31,7 +31,7 @@ function Dashboard() {
      
       <div className="section-dashboard ">
         <div className="top">
-        <h3 className="username"> Hello {getUser.username}</h3>
+        <h3 className="username"> Hello {user.username}</h3>
         <h2 className="title">Sales statistics</h2>
        
         

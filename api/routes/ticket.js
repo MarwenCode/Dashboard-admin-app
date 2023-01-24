@@ -70,7 +70,8 @@ ticketRoute.get("/", async(req, res) => {
 //Get ticket
 ticketRoute.get("/:id", async (req, res) => {
   try {
-    const ticket = await Ticket.findById(req.params.id);
+    const ticket = await Ticket.findById(req.params.id).populate("descriptions")
+    .exec();
     res.status(200).json(ticket);
   } catch (error) {
     res.status(500).json(error);

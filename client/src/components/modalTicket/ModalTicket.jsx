@@ -2,9 +2,10 @@ import React, {useContext, useState} from "react";
 import { AppContext } from "../../context/context";
 import axios from "axios";
 import "./modalticket.scss";
+import { CiLogin } from "react-icons/ci";
 
 const ModalTicket = ({setShowLModalTicket, singleTicket}) => {
-    const {user,getUser } = useContext(AppContext)
+    const {user: currentUser,getUser } = useContext(AppContext)
     const [newDescription, setNewDescription] = useState([])
 
     const addNewDescription = async (e) => {
@@ -12,8 +13,8 @@ const ModalTicket = ({setShowLModalTicket, singleTicket}) => {
    
        const newDescr = {
         ticketId:singleTicket._id,
-         username:getUser.username,
-         userId: getUser._id,
+         username:currentUser.data.username,
+         userId: currentUser._id,
          text: newDescription
        }
 
@@ -31,7 +32,9 @@ const ModalTicket = ({setShowLModalTicket, singleTicket}) => {
     }
 
     console.log(newDescription)
-
+   console.log(getUser)
+   console.log(singleTicket)
+   console.log(currentUser)
 
     
   return (

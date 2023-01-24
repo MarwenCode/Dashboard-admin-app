@@ -113,27 +113,42 @@
 
 
           }
-        }
-      }
 
-      .newDescription {
-        margin-top: 300px;
-        margin-left: 100px;
-        position: absolute;
-
-        .new {
-          background-color: #c3dcec;
-          width: 350px;
-          height: 50px;
-
-          p {
-            background-color: rgb(152, 158, 158);
-          }
-        }
+          .newDescription {
+            margin-top: 50px;
+            margin-left: -20px;
         
+
+            background-color: rgb(236, 234, 234);
+        
+            width: 650px;
+        
+            position: absolute;
+            // height: 150px;
+            text-align: start;
+            padding: 20px;
+    
+            .new {
+              background-color: rgb(236, 234, 234);
+              width: 550px;
+              height: 50px;
+
+              span {
+                color: grey;
+              }
+    
+              p {
+                // background-color: rgb(152, 158, 158);
+              }
+            }
+            
+          }
+    
+        }
+        }
       }
 
-    }
+    
     .down {
       margin-left: 250px;
       // margin-right: 700px;

@@ -5,18 +5,19 @@ import axios from 'axios';
 import { AppContext } from '../../context/context';
 
 const AddTicket = () => {
-    const { user } = useContext(AppContext);
+    const { user, getUser } = useContext(AppContext);
     const [title, setTitle]= useState("")
     const [product, setProduct]= useState("")
     const [description, setDescription]= useState("")
     const [status, setStatus]= useState("")
 
-
+    console.log(user);
     //add ticket
     const addTicket = async(e) => {
         e.preventDefault();
         const newTicket = {
-            // userId:user._id,
+            userId:user._id,
+            username: user.username,
             title,
             product,
             description,

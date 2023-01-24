@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import Dashboard from '../../pages/sidebar/SideBar';
 import "./register.scss";
 import axios from "axios";

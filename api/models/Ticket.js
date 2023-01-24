@@ -6,6 +6,10 @@ const TicketSchema = mongoose.Schema(
       type: String,
       // required: true,
     },
+    username: {
+      type: String,
+      // required: true,
+    },
     title: { type: String, required: true, unique: true },
     product: {
       type: String,
@@ -28,7 +32,7 @@ const TicketSchema = mongoose.Schema(
 TicketSchema.virtual("descriptions", {
   ref: "Description",
   localField: "_id",
-  foreignField: "TicketId",
+  foreignField: "ticketId",
   justOne: false,
 })
 
