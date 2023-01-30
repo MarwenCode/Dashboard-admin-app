@@ -10,7 +10,8 @@ const Products = () => {
 
   useEffect(() => {
     const fetchProducts = async() => {
-      const res = await axios.get("/product")
+      // const res = await axios.get("/product")
+      const res = await axios.get("https://dashboard-api-marwen.onrender.com/api/product")
       console.log(res)
       setProducts(res.data)
     }

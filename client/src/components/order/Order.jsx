@@ -134,10 +134,12 @@ const Order = ({ item, status }) => {
   const handleStatus = async (itemId) => {
     try {
       // Send a PUT request to update the status on the backend
-      await axios.put(`/product/${item._id}`, { status: "confirm" });
+      // await axios.put(`/product/${item._id}`, { status: "confirm" });
+      await axios.put(`https://dashboard-api-marwen.onrender.com/api/product/${item._id}`, { status: "confirm" });
   
       // Fetch the updated product from the backend
-      const updatedProduct = await axios.get(`/product/${item._id}`);
+      // const updatedProduct = await axios.get(`/product/${item._id}`);
+      const updatedProduct = await axios.get(`https://dashboard-api-marwen.onrender.com/api/product/${item._id}`);
   
       // Update the status in the local state
       setNewStatus(updatedProduct.data.status);

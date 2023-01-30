@@ -14,7 +14,8 @@ const Login = () => {
 
     
         try {
-            const res = await axios.post("/user/login", {
+            // const res = await axios.post("/user/login", {
+            const res = await axios.post("https://dashboard-api-marwen.onrender.com/api/user/login", {
                 email,
                 password
             })
@@ -22,7 +23,7 @@ const Login = () => {
             localStorage.setItem("user", JSON.stringify(res))
             console.log(res)
         
-            res.data && window.location.replace("/dashboard");
+            res.data && window.location.replace("/");
             
         } catch (error) {
             console.log(error)

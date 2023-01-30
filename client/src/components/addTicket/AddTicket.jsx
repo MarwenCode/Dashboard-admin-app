@@ -26,7 +26,8 @@ const AddTicket = () => {
         }
 
         try {
-            const res =  axios.post("/ticket", newTicket);
+            // const res =  axios.post("/ticket", newTicket);
+            const res =  axios.post("https://dashboard-api-marwen.onrender.com/api/ticket", newTicket);
             console.log(res.data)
             window.location.replace("/tickets");
             

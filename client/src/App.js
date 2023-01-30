@@ -22,26 +22,16 @@ function App() {
         // className={modalOpen ? 'moadalActive' : 'container'}
         className="container">
         <Routes>
-          {user ? (
-            <>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/item" element={<Item />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/tickets" element={<Tickets />} />
-              <Route path="/addTicket" element={<AddTicket />} />
-              <Route path="/ticket/:id" element={<SingleTicket />} />
-            </>
-          ) : (
-            <>
-              <Route
-                path="/register"
-                element={user ? <Login /> : <Register />}
-              />
-              <Route path="/login" element={user ? <Dashboard /> : <Login />} />
-            </>
-          )}
+          <Route path="/" element={user ? <Dashboard /> : <Login />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/item" element={<Item />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/addTicket" element={<AddTicket />} />
+          <Route path="/ticket/:id" element={<SingleTicket />} />
+          <Route path="/register" element={user ? <Login /> : <Register />} />
+          <Route path="/login" element={user ? <Dashboard /> : <Login />} />
         </Routes>
       </div>
     </Router>

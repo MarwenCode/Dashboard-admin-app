@@ -27,7 +27,8 @@ const Item = () => {
     };
 
     try {
-      const res = await axios.post("/product", newItem);
+      // const res = await axios.post("/product", newItem);
+      const res = await axios.post("https://dashboard-api-marwen.onrender.com/api/product", newItem);
 
       console.log(res.data);
       window.location.replace("/products");

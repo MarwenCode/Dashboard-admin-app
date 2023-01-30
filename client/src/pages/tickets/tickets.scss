@@ -1,8 +1,6 @@
 .tickets-section{
     background-color: white;
     color: black;
-
-    background-color: white;
     margin-top: -530px;
     width: 88%;
     height: 95vh;
@@ -17,12 +15,15 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    background: #f4f4f4;
+    // background: #f4f4f4;
+    background-color: #b1adad;
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
     width: 90%;
     margin-left: 60px;
+    margin-top: 10px;
+    font-weight: 700;
   }
 
 }

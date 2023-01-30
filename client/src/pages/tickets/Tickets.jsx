@@ -11,6 +11,7 @@ const Tickets = () => {
     useEffect(() => {
         const fetchTickets = async() => {
             const res = await axios.get("/ticket");
+            // const res = await axios.get("https://dashboard-api-marwen.onrender.com/api/ticket");
             console.log(res)
             setTickets(res.data)
         }

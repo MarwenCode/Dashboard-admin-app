@@ -15,7 +15,8 @@ const Register = () => {
     const handleRegister = async(e) => {
         e.preventDefault()
         try {
-            const res = await axios.post("/user/register", {
+            // const res = await axios.post("/user/register", {
+            const res = await axios.post("https://dashboard-api-marwen.onrender.com/api/user/register", {
                 username,
                 email,
                 password,

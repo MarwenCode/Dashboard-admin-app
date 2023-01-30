@@ -10,7 +10,8 @@ const Product = ({product}) => {
   //delete product
   const deleteProduct = async(productId) => {
     try {
-      await axios.delete(`/product/${productId}`, {
+      // await axios.delete(`/product/${productId}`, {
+      await axios.delete(`https://dashboard-api-marwen.onrender.com/api/product/${productId}`, {
         data: {productId: product._id }
       });
       window.location.replace("/products");

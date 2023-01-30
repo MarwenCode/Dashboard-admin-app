@@ -19,7 +19,8 @@ const ModalTicket = ({setShowLModalTicket, singleTicket}) => {
        }
 
        try {
-        const res = await axios.post(`/description/${singleTicket._id}`, newDescr )
+        // const res = await axios.post(`/description/${singleTicket._id}`, newDescr )
+        const res = await axios.post(`https://dashboard-api-marwen.onrender.com/api/description/${singleTicket._id}`, newDescr )
         console.log(res.data);
         window.location.replace(`/ticket/${singleTicket._id}` );
         

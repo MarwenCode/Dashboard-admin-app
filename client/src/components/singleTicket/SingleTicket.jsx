@@ -35,7 +35,8 @@ const SingleTicket = () => {
 
   useEffect(() => {
     const getSingleTicket = async () => {
-      const res = await axios.get("/ticket/" + path);
+      // const res = await axios.get("/ticket/" + path);
+      const res = await axios.get("https://dashboard-api-marwen.onrender.com/api/ticket/" + path);
       console.log(res.data);
       setSingleTicket(res.data);
       setDescription(res.data.description);
@@ -48,20 +49,42 @@ const SingleTicket = () => {
 
   //update ticket
 
+  // const updateTicket = async () => {
+  //   try {
+  //     // await axios.put(`/ticket/${singleTicket._id}`, {
+  //     await axios.put(`https://dashboard-api-marwen.onrender.com/api/ticket/${singleTicket._id}`, {
+  //       description,
+  //       status,
+  //     });
+
+  //     setUpdateMode(false);
+
+  //     // window.location.replace("/ticket/" + path);
+  //     window.location.replace(`https://dashboard-app-marwen.onrender.com/ticket/${singleTicket._id}`);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+
   const updateTicket = async () => {
     try {
-      await axios.put(`/ticket/${singleTicket._id}`, {
+      const response = await axios.put(`https://dashboard-api-marwen.onrender.com/api/ticket/${singleTicket._id}`, {
         description,
         status,
       });
-
-      setUpdateMode(false);
-
-      window.location.replace("/ticket/" + path);
+  
+      if (response.status === 200) {
+        setUpdateMode(false);
+        window.location.reloac(`/ticket/${singleTicket._id}`);
+   
+      } else {
+        console.error(`Error updating ticket: ${response.status}`);
+      }
     } catch (error) {
-      console.log(error);
+      console.error(`Error updating ticket: ${error.message}`);
     }
   };
+  
 
   //get description
   // useEffect(() => {
@@ -146,7 +169,7 @@ const SingleTicket = () => {
                 </span>
 
                 <p> Description: {singleTicket.description}</p>
-
+{/* 
                 <div className="newDescription">
                   {singleTicket?.descriptions?.map((newDesc, index) => (
                     <div className="new" key={index}>
@@ -155,7 +178,7 @@ const SingleTicket = () => {
                       <p> {newDesc.text} </p>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             )}
           </div>
