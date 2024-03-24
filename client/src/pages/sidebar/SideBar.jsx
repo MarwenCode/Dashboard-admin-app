@@ -48,16 +48,18 @@ const SideBar = () => {
           </Link>
         ) : (
           <Link to="/register" className="link">
-            <li className="logout">Login</li>
+            <li className="logout">Register</li>
           </Link>
         )}
-
         <Link to="/dashboard" className="link">
           <li className="item"> <RiHome6Line /> Dashboard </li>
       
         </Link>
 
-        <Link to="/products" className="link">
+        {user && (
+
+          <>
+          <Link to="/products" className="link">
           <li className="item"> <GrProductHunt />  Products</li>
         </Link>
         <Link to="/item" className="link">
@@ -83,6 +85,16 @@ const SideBar = () => {
         
          </li>
          </Link>
+          </>
+
+
+
+
+        )}
+
+        
+
+        
       
       
       </ul>

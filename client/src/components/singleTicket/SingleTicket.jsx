@@ -75,7 +75,7 @@ const SingleTicket = () => {
   
       if (response.status === 200) {
         setUpdateMode(false);
-        window.location.reloac(`/ticket/${singleTicket._id}`);
+        window.location.reload(`/ticket/${singleTicket._id}`);
    
       } else {
         console.error(`Error updating ticket: ${response.status}`);

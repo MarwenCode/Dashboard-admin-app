@@ -25,7 +25,7 @@ export const AppProvider = ({ children }) => {
   //     const res = await axios.get("/user")
    
   //     // setgetUser(res.data)
-  //     setUser(res.data)
+  //     setgetUser(res.data)
   //     console.log(res)
   //    }
 
@@ -33,7 +33,7 @@ export const AppProvider = ({ children }) => {
   // }, [])
 
   // console.log(getUser)
-  // console.log(user.data)
+  console.log(user)
 
   // get products : 
   const [products, setProducts] = useState([])

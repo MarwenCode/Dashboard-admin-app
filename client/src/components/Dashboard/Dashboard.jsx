@@ -10,7 +10,7 @@ import { AppContext } from "../../context/context";
 import axios from "axios";
 
 function Dashboard() {
-  const { user, getUser } = useContext(AppContext);
+  const {user, getUser} = useContext(AppContext);
 
 
   const [width, setWidth] = useState(0);
@@ -31,7 +31,7 @@ function Dashboard() {
      
       <div className="section-dashboard ">
         <div className="top">
-        <h3 className="username"> Hello {user.username}</h3>
+        <h3 className="username"> Hello {user.data.username}</h3>
         <h2 className="title">Sales statistics</h2>
        
         

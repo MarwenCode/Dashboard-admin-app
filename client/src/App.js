@@ -12,6 +12,7 @@ import Orders from "./pages/orders/Orders";
 import Tickets from "./pages/tickets/Tickets";
 import AddTicket from "./components/addTicket/AddTicket";
 import SingleTicket from "./components/singleTicket/SingleTicket";
+import AlertMessage from "./components/alertMessage/AlterMessage";
 
 function App() {
   const { user, modalOpen } = useContext(AppContext);
@@ -22,9 +23,9 @@ function App() {
         // className={modalOpen ? 'moadalActive' : 'container'}
         className="container">
         <Routes>
-          <Route path="/" element={user ? <Dashboard /> : <Login />} />
+          <Route path="/" element={user ? <Dashboard /> : <Login />} /> 
+          <Route path="/dashboard" element={user ? <Dashboard /> : <AlertMessage />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/item" element={<Item />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/tickets" element={<Tickets />} />

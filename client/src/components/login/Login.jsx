@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import Dashboard from '../../pages/sidebar/SideBar';
-// import "./login.scss";
+import "./login.scss";
 import axios from "axios";
 import { Link } from "react-router-dom"
 
@@ -80,7 +80,11 @@ const Login = () => {
       <div className="form-group">
         <button className="btn">Login</button>
       </div>
+      <Link to="/register">
+             <span>if you have an account click here</span>
+          </Link>
     </form>
+
   </section>
 </div>
  
