@@ -1,4 +1,31 @@
 .alertMessage {
     margin: 50px 450px;
-   
-}
+  
+    button {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #007bff;
+      color: #ffffff; 
+      border: none; 
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease; 
+  
+      &:hover {
+        transform: scale(1.05); 
+        background-color: #3e81ad; 
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      margin: 50px 100px; 
+    }
+  
+    @media screen and (max-width: 425px) {
+      margin: 50px 20px;
+    }
+  
+    @media screen and (max-width: 320px) {
+      margin: 20px 10px; 
+    }
+  }
+  

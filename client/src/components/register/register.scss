@@ -7,13 +7,16 @@
      height: auto;
      border-radius: 20px;
      padding: 20px;
-     display: flex; /* Use flexbox */
-     flex-direction: column; /* Align children vertically */
-     justify-content: center; /* Center children horizontally */
-     align-items: center; /* Center children vertically */
+     display: flex; 
+     flex-direction: column; 
+     justify-content: center; 
+     align-items: center; 
      color: black;
-     margin-left: 30%;
-     margin-top: -10%;
+    //  margin-left: 30%;
+    //  margin-top: 0%;
+     justify-content: center;
+     align-items: center;
+     transform: translate(130%,-40%);
  
      .heading {
        margin-bottom: 20px;
